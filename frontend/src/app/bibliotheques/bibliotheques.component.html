@@ -1,0 +1,18 @@
+<br>
+<form>
+    <input name="bibliotheque-nom" type="text" [(ngModel)]="bibliothequesService.nom" placeholder="Nom"/>
+    <input name="bibliotheque-adresse" type="text" [(ngModel)]="bibliothequesService.adresse" placeholder="Adresse"/>
+    <input name="bibliotheque-telephone" type="text" [(ngModel)]="bibliothequesService.telephone" placeholder="Telephone"/>
+    <button (click)="bibliothequesService.addBiblotheque()">Ajouter</button>
+  </form>
+  
+  <div>
+    <div *ngFor="let bibliotheque of bibliothequesService.bibliotheques">
+      <div> {{bibliotheque.id}}</div>
+      <div> {{bibliotheque.nom}}</div>
+      <div> {{bibliotheque.adresse}}</div>
+      <div> {{bibliotheque.telephone}}</div>
+      <button (click)="bibliothequesService.deleteBibliotheque(bibliotheque)">Supprimer</button>
+      <button routerLink="/bibliotheque/{{bibliotheque.id}}">Modifier</button>
+    </div>
+  </div>
