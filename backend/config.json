@@ -1,0 +1,13 @@
+﻿{
+    "connectionString": "mongodb://localhost/e-livre",
+    "secret": "MySecretCode",
+    "emailFrom": "info@dauphine.com",
+    "smtpOptions": {
+        "host": "smtp.ethereal.email",
+        "port": 587,
+        "auth": {
+            "user": "arely67@ethereal.email",
+            "pass": "p57QqKq4agKkfBp6zD"
+        }
+    }
+}
