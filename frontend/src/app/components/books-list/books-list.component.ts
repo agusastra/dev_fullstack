@@ -22,7 +22,7 @@ export class BooksListComponent implements OnInit {
 
   delete(id:any, i:any) {
     console.log(id);
-    if(window.confirm('Do you want to go ahead?')) {
+    if(window.confirm('Vous êtes sûr?')) {
       this.crudService.deleteBook(id).subscribe((res) => {
         this.Books.splice(i, 1);
       })

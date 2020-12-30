@@ -15,8 +15,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AddBookComponent } from './components/add-book/add-book.component';
 import { BookDetailComponent } from './components/book-detail/book-detail.component';
 import { BooksListComponent } from './components/books-list/books-list.component';
-import { BibliothequeComponent } from './bibliotheque/bibliotheque.component';
-import { BibliothequesComponent } from './bibliotheques/bibliotheques.component';
+
 
 
 @NgModule({
@@ -37,8 +36,6 @@ import { BibliothequesComponent } from './bibliotheques/bibliotheques.component'
         AddBookComponent,
         BookDetailComponent,
         BooksListComponent,
-        BibliothequeComponent,
-        BibliothequesComponent,
       
 
     ],

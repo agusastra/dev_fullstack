@@ -1,6 +1,11 @@
 {
   "name": "frontend",
   "version": "0.0.0",
+  "description": "AngularJs pour CRUD Livre, CRUD Account, CRUD Profil",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/agusastra/dev_fullstack/tree/master/frontend"
+},
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open",

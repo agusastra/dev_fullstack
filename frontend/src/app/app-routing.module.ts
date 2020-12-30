@@ -5,7 +5,6 @@ import { HomeComponent } from './home';
 import { BooksListComponent } from './components/books-list/books-list.component';
 import { AddBookComponent } from './components/add-book/add-book.component';
 import { BookDetailComponent } from './components/book-detail/book-detail.component';
-import { BibliothequesComponent } from './bibliotheques/bibliotheques.component';
 import { AuthGuard } from './_helpers';
 import { Role } from './_models';
 
@@ -20,7 +19,6 @@ const routes: Routes = [
     { path: 'books-list', component: BooksListComponent },
     { path: 'add-book', loadChildren: adminModule, component: AddBookComponent, canActivate: [AuthGuard], data: { roles: [Role.Admin] }},
     { path: 'edit-book/:id', loadChildren: adminModule, component: BookDetailComponent, canActivate: [AuthGuard], data: { roles: [Role.Admin] }},
-    { path:'bibliotheques', component: BibliothequesComponent, canActivate: [AuthGuard], },
     { path: 'admin', loadChildren: adminModule, canActivate: [AuthGuard], data: { roles: [Role.Admin] } },
 
     // otherwise redirect to home

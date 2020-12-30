@@ -6,7 +6,6 @@
             <ul class="navbar-nav">
             <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-item nav-link">Home</a>
             <a class="nav-link" routerLinkActive="active" routerLink="/books-list">Livres</a>
-            <a *ngIf="account.role === Role.Admin" routerLink="/bibliotheques" routerLinkActive="active" class="nav-item nav-link">Bibliotheques</a>
             <a *ngIf="account.role === Role.Admin" class="nav-link" routerLinkActive="active" routerLink="/add-book">Ajouter Livres</a>
             </ul>
             <ul class="navbar-nav ml-auto">

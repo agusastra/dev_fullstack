@@ -1,11 +1,11 @@
 {
     "name": "backend",
-    "version": "1.0.0",
+    "version": "0.0.0",
     "description": "NodeJS + MongoDB API for Email Sign Up with Verification, Authentication & Forgot Password",
-    "license": "MIT",
+    "main": "server.js",
     "repository": {
-        "type": "",
-        "url": ""
+        "type": "github",
+        "url": "https://github.com/agusastra/dev_fullstack/tree/master/backend"
     },
     "scripts": {
         "start": "node ./server.js",
