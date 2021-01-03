@@ -54,7 +54,7 @@ export class BibliothequesComponent implements OnInit {
       (bibliotheque: any) => {
         console.log(`coucou je suis la !`);
         this.bibliotheques.push(bibliotheque);
-        this.router.navigate(['/bibliotheques']).then( () => { });
+        this.router.navigate(['/bibliotheques']).then( () => { window.location.reload() });
       },
       (error) => {
         console.log('error ' + error);
