@@ -1,0 +1,64 @@
+
+<mat-card class="new-bibliotheque">
+  <mat-card-header>
+    <mat-card-title>Nouvelle Bibliotheque</mat-card-title>
+    <mat-card-subtitle>Remplissez les champs suivant</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <mat-form-field>
+      <mat-label>Nom</mat-label>
+      <input matInput type="text" required [(ngModel)]="nom" placeholder="Nom">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Adresse</mat-label>
+      <input matInput name="bibliotheque-adresse" type="text" required [(ngModel)]="adresse" placeholder="Adresse"/>
+      <mat-icon matSuffix>home</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Telephone</mat-label>
+      <input matInput name="bibliotheque-telephone" type="text" required [(ngModel)]="telephone" placeholder="Telephone"/>
+      <mat-icon matSuffix>phone</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <textarea matInput name="bibliotheque-description" type="text" required [(ngModel)]="description" placeholder="description"></textarea>
+    </mat-form-field>
+
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button id="ajouter" mat-raised-button color="primary" (click)="addBibliotheque()" mat-button>Ajouter</button>
+  </mat-card-actions>
+
+</mat-card>
+
+
+<div>
+  <mat-card class="bibliotheque" *ngFor="let bibliotheque of bibliotheques">
+    <mat-card-header>
+      <mat-card-title>
+        <div> {{bibliotheque.nom}}</div>
+      </mat-card-title>
+
+      <mat-card-subtitle>
+        <div> Tel: {{bibliotheque.telephone}}</div>
+        <div> Adresse: {{bibliotheque.adresse}}</div>
+      </mat-card-subtitle>
+
+    </mat-card-header>
+
+    <mat-card-content>
+      <div> {{bibliotheque.description}}</div>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button (click)="deleteBibliotheque(bibliotheque)" mat-raised-button color="warn">Supprimer</button>
+      <button routerLink="/bibliotheques/{{bibliotheque._id}}" mat-raised-button color="accent">Modifier</button>
+    </mat-card-actions>
+
+  </mat-card>
+</div>

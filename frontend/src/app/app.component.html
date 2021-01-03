@@ -1,0 +1,34 @@
+﻿<div class="app-container" [ngClass]="{ 'bg-light': account }">
+    <!-- main nav -->
+    <nav class="navbar navbar-expand navbar-dark bg-primary" *ngIf="account">
+        <a class="navbar-brand">E-LIVRE</a>
+        <div id="navbarNav" class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-item nav-link">Home</a>
+            <a class="nav-link" routerLinkActive="active" routerLink="/books-list">Livres</a>
+            <a *ngIf="account.role === Role.Admin" routerLink="/bibliotheques" routerLinkActive="active" class="nav-item nav-link">Bibliotheques</a>
+            <a *ngIf="account.role === Role.Admin" class="nav-link" routerLinkActive="active" routerLink="/add-book">Ajouter Livres</a>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a routerLink="/profile" routerLinkActive="active" class="nav-item nav-link">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a *ngIf="account.role === Role.Admin" routerLink="/admin" routerLinkActive="active" class="nav-item nav-link">Admin</a>
+                </li>
+                <li class="nav-item">
+                    <a (click)="logout()" class="nav-item nav-link">Logout</a>
+                </li>
+            </ul>
+        </div>
+        
+    </nav>
+    <!-- subnav router outlet -->
+    <router-outlet name="subnav"></router-outlet>
+
+    <!-- global alert -->
+    <alert></alert>
+
+    <!-- main router outlet -->
+    <router-outlet></router-outlet>
+</div>
